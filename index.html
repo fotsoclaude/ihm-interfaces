@@ -9,20 +9,23 @@
 </head>
 <body>
     <main class="container container--home">
-        <!-- <form action="#" class="form">
-            <div class="form__item">
-                <label for="only-go" class="form__label">Aller simple</label>
-                <input type="checkbox" name="travel-type" id="only-go" class="checkbox">
-            </div>
-            <div class="form__item">
-                <label for="go-back" class="form__label">Aller retour</label>
-                <input type="checkbox" name="travel-type" id="go-back" class="checkbox">
-            </div>
-        </form> -->
-        <div class="form form--type">Form 1</div>
-        <div class="form form--towns">Towns</div>
-        <div class="form form--person">Person</div>
-        <div class="form form--date">Date</div>
+        <div class="group group--type">
+            <form action="#" class="form form--type">
+                <div class="form__group form__group--1">
+                    <label for="only-go" class="form__label">Aller simple</label>
+                    <input type="radio" name="travel-type" id="only-go" class="form__radio-input">
+                    <label for="only-go" class="form__radio-button"></label>
+                </div>
+                <div class="form__group form__group--2">
+                    <label for="go-back" class="form__label">Aller retour</label>
+                    <input type="radio" name="travel-type" id="go-back" class="form__radio-input">
+                    <label for="go-back" class="form__radio-button"></label>
+                </div>
+            </form>
+        </div>
+        <div class="group group--towns">Towns</div>
+        <div class="group group--person">Person</div>
+        <div class="group group--date">Date</div>
     </main>
 </body>
 </html>
