@@ -10,21 +10,64 @@
 <body>
     <main class="container container--home">
         <div class="group group--type">
-            <form action="#" class="form form--type">
-                <div class="form__group form__group--1">
+            <form action="#" class="form form--cols">
+                <div class="form__group form__group--col">
                     <label for="only-go" class="form__label">Aller simple</label>
                     <input type="radio" name="travel-type" id="only-go" class="form__radio-input">
                     <label for="only-go" class="form__radio-button"></label>
                 </div>
-                <div class="form__group form__group--2">
+                <div class="form__group form__group--col">
                     <label for="go-back" class="form__label">Aller retour</label>
                     <input type="radio" name="travel-type" id="go-back" class="form__radio-input">
                     <label for="go-back" class="form__radio-button"></label>
                 </div>
             </form>
         </div>
-        <div class="group group--towns">Towns</div>
-        <div class="group group--person">Person</div>
+        <div class="group group--towns">
+            <form action="#" class="form form--rows">
+                <div class="form__group form__group--row">
+                    <label for="town-start" class="form__label">Gare de départ</label>
+                    <select name="town-start" id="town-start" class="form__select">
+                        <option value="Bafoussam">Bafoussam</option>
+                        <option value="Bamenda">Bamenda</option>
+                        <option value="Bertoua">Bertoua</option>
+                        <option value="Buéa">Buéa</option>
+                        <option value="Ebolowa">Ebolowa</option>
+                        <option value="Douala">Douala</option>
+                        <option value="Yaoundé">Yaoundé</option>
+                    </select>
+                </div>
+                <div class="form__group form__group--row">
+                    <label for="town-end" class="form__label">Gare d'arriver</label>
+                    <select name="town-end" id="town-end" class="form__select">
+                        <option value="Bafoussam">Bafoussam</option>
+                        <option value="Bamenda">Bamenda</option>
+                        <option value="Bertoua">Bertoua</option>
+                        <option value="Buéa">Buéa</option>
+                        <option value="Ebolowa">Ebolowa</option>
+                        <option value="Douala">Douala</option>
+                        <option value="Yaoundé">Yaoundé</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="group group--person">
+            <form action="#" class="form form--person">
+                <div class="form__group">
+                    <label for="adultes" class="form__label">Adultes</label>
+                    <input type="number" min="1" value="1" name="adultes" id="adultes" class="form__number">
+                </div>
+                <div class="form__group">
+                    <label for="enfants" class="form__label">Enfants</label>
+                    <input type="number" min="1" value="1" name="enfants" id="adultes" class="form__number">
+                </div>
+                <div class="form__group">
+                    <label for="enfants" class="form__label">Personne en situation de handicap</label>
+                    <input type="checkbox" name="handicap" id="handicap" class="form__checkbox-input">
+                    <label for="handicap" class="form__checkbox-button"></label>
+                </div>
+            </form>
+        </div>
         <div class="group group--date">Date</div>
     </main>
 </body>

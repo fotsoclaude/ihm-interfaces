@@ -31,22 +31,28 @@
 
 .form {
 
+    width: 80%;
     display: grid;
+    justify-items: start;
 
-    &__group--1, 
-    &__group--2 {
-        display: grid;
-        grid-template-columns: minmax(25rem, 1fr);
-        grid-template-rows: max-content;
+    &__group--row {
+        grid-template-rows: 1fr;
     }
 
-    //CUSTUMIZE RADIO BUTTON
-
-    &__radio-input {
+    &__group--col {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+    
+    //CUSTUMIZE RADIO & CHECKBOX BUTTON
+    
+    &__radio-input,
+    &__checkbox-input {
         display: none;
     }
-
-    &__radio-button {
+    
+    &__radio-button,
+    &__checkbox-button {
         position: relative;
         display: inline-block;
         height: 3rem;
@@ -87,25 +93,47 @@
         }
     }
 
-    &__radio-input:checked ~ &__radio-button {
+    &__radio-input:checked ~ &__radio-button,
+    &__checkbox-input:checked ~ &__checkbox-button
+    {
         border-color: $color-primary;
     }
 
     &__radio-input:checked ~ &__radio-button::before, 
-    &__radio-input:checked ~ &__radio-button::after {
+    &__radio-input:checked ~ &__radio-button::after, 
+    &__checkbox-input:checked ~ &__checkbox-button::before, 
+    &__checkbox-input:checked ~ &__checkbox-button::after {
         opacity: 1;
     }
 
-    &--type {
+
+    &__select {
+        padding: .2rem;
+        width: 80%;
+        height: 2.5rem;
+        outline: $color-secondary .1rem;
+        justify-self: end;
+        margin-right: 2rem;
+    }
+
+    &__number {
+        width: 5rem;
+        padding: .2rem;
+    }
+
+    &--cols {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
 
-    &--towns {
-
+    &--rows {
+        
+        background-color: antiquewhite;
+        row-gap: 1rem;
     }
 
     &--person {
+        grid-template-columns: 1fr 1fr;
 
     }
 
