@@ -1,0 +1,4 @@
+@mixin centerLayout {
+    grid-column: center-col-start / center-col-end;
+    justify-items: center;
+}

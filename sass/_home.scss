@@ -1,0 +1,30 @@
+
+.form {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    
+    &--type {
+        @include centerLayout;
+        grid-row: center-row-start / row-start 1;
+        background-color: royalblue;
+    }
+
+    &--towns {
+        @include centerLayout;
+        grid-row: row-start 1 / row-start 2;
+        background-color: rebeccapurple
+    }
+    
+    &--person {
+        @include centerLayout;
+        grid-row: row-start 2 / row-start 3;
+        background-color: aqua
+    }
+
+    &--date {
+        @include centerLayout;
+        grid-row: row-start 3 / center-row-end;
+        background-color: aquamarine;
+    }
+}

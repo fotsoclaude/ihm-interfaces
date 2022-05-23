@@ -10,3 +10,12 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: [full-col-start] minmax(.5rem, 1fr) [center-col-start] minmax(40vw, 1fr) [center-col-end] minmax(.5rem, 1fr) [full-col-end];
+
+    &--home {
+        grid-template-rows: [full-row-start] minmax(5rem, 1fr) [center-row-start] 10rem repeat(3, [row-start] 25rem [row-end]) 2rem [center-row-end] 1fr [full-row-end];
+    }
+}
