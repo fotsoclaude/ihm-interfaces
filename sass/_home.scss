@@ -2,29 +2,30 @@
     display: grid;
     justify-items: center;
     align-items: center;
+    background-color: #fff;
     
     &--type {
         @include centerLayout;
         grid-row: center-row-start / row-start 1;
-        background-color: royalblue;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
     }
 
     &--towns {
         @include centerLayout;
         grid-row: row-start 1 / row-start 2;
-        background-color: rebeccapurple
     }
     
     &--person {
         @include centerLayout;
         grid-row: row-start 2 / row-start 3;
-        background-color: aqua
     }
 
     &--date {
         @include centerLayout;
         grid-row: row-start 3 / center-row-end;
-        background-color: aquamarine;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
 }
 
@@ -35,7 +36,7 @@
     &__group--1, 
     &__group--2 {
         display: grid;
-        grid-template-columns: minmax(13rem, max-content);
+        grid-template-columns: minmax(25rem, 1fr);
         grid-template-rows: max-content;
     }
 
@@ -50,7 +51,7 @@
         display: inline-block;
         height: 3rem;
         width: 3rem;
-        border: 2px solid burlywood;
+        border: .25rem solid $color-grey-light;
         border-radius: .8rem;
         cursor: pointer;
         transition: all .2s;
@@ -62,7 +63,7 @@
             width: .3rem;
             height: 1.5rem;
             border-radius: 2rem;
-            background-color: red;
+            background-color: $color-primary;
             transform: rotate(35deg);
             top: .4rem;
             left: 1.4rem;
@@ -77,13 +78,17 @@
             width: .3rem;
             height: .8rem;
             border-radius: 2rem;
-            background-color: red;
+            background-color: $color-primary;
             transform: rotate(-35deg);
             top: 1rem;
             left: .85rem;
             opacity: 0;
             transition: opacity .2s;
         }
+    }
+
+    &__radio-input:checked ~ &__radio-button {
+        border-color: $color-primary;
     }
 
     &__radio-input:checked ~ &__radio-button::before, 

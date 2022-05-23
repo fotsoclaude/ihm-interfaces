@@ -1,3 +1,8 @@
+// VARIABLE COLORS
+$color-primary: #f9017c;
+$color-secondary: #0c98c4;
+$color-grey-light: #ccc;
+
 *, 
 *::before, 
 *::after {
@@ -9,6 +14,13 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    background-color: $color-secondary;
+    color: $color-secondary;
+    font-family: "Poppins", sans-serif;
 }
 
 .container {

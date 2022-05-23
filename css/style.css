@@ -9,6 +9,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+body {
+  font-size: 1.8rem;
+  background-color: #0c98c4;
+  color: #0c98c4;
+  font-family: "Poppins", sans-serif; }
+
 .container {
   display: grid;
   grid-template-columns: [full-col-start] minmax(0.5rem, 1fr) [center-col-start] minmax(40vw, 1fr) [center-col-end] minmax(0.5rem, 1fr) [full-col-end]; }
@@ -19,33 +25,34 @@ html {
 .group {
   display: grid;
   justify-items: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #fff; }
   .group--type {
     grid-column: center-col-start / center-col-end;
     justify-items: center;
     grid-row: center-row-start / row-start 1;
-    background-color: royalblue; }
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
   .group--towns {
     grid-column: center-col-start / center-col-end;
     justify-items: center;
-    grid-row: row-start 1 / row-start 2;
-    background-color: rebeccapurple; }
+    grid-row: row-start 1 / row-start 2; }
   .group--person {
     grid-column: center-col-start / center-col-end;
     justify-items: center;
-    grid-row: row-start 2 / row-start 3;
-    background-color: aqua; }
+    grid-row: row-start 2 / row-start 3; }
   .group--date {
     grid-column: center-col-start / center-col-end;
     justify-items: center;
     grid-row: row-start 3 / center-row-end;
-    background-color: aquamarine; }
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
 
 .form {
   display: grid; }
   .form__group--1, .form__group--2 {
     display: grid;
-    grid-template-columns: minmax(13rem, max-content);
+    grid-template-columns: minmax(25rem, 1fr);
     grid-template-rows: max-content; }
   .form__radio-input {
     display: none; }
@@ -54,7 +61,7 @@ html {
     display: inline-block;
     height: 3rem;
     width: 3rem;
-    border: 2px solid burlywood;
+    border: 0.25rem solid #ccc;
     border-radius: .8rem;
     cursor: pointer;
     transition: all .2s; }
@@ -65,7 +72,7 @@ html {
       width: .3rem;
       height: 1.5rem;
       border-radius: 2rem;
-      background-color: red;
+      background-color: #f9017c;
       transform: rotate(35deg);
       top: .4rem;
       left: 1.4rem;
@@ -78,12 +85,14 @@ html {
       width: .3rem;
       height: .8rem;
       border-radius: 2rem;
-      background-color: red;
+      background-color: #f9017c;
       transform: rotate(-35deg);
       top: 1rem;
       left: .85rem;
       opacity: 0;
       transition: opacity .2s; }
+  .form__radio-input:checked ~ .form__radio-button {
+    border-color: #f9017c; }
   .form__radio-input:checked ~ .form__radio-button::before,
   .form__radio-input:checked ~ .form__radio-button::after {
     opacity: 1; }
