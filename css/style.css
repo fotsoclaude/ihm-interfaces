@@ -60,8 +60,14 @@ body {
   .form__group--col {
     display: grid; }
     .form__group--col-2 {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 3.6rem max-content;
       grid-column: 1 / -1;
       font-size: 1.6rem; }
+  .form__group-pers {
+    display: grid;
+    grid-template-columns: max-content; }
   .form__radio-input, .form__checkbox-input {
     display: none; }
   .form__radio-button, .form__checkbox-button {

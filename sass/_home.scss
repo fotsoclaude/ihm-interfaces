@@ -46,9 +46,17 @@
         display: grid;
 
         &-2 {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 3.6rem max-content;
             grid-column: 1 / -1;
             font-size: 1.6rem;
         }
+    }
+
+    &__group-pers {
+        display: grid;
+        grid-template-columns: max-content;
     }
     
     //CUSTUMIZE RADIO & CHECKBOX BUTTON
