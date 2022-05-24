@@ -51,12 +51,17 @@ body {
 .form {
   width: 80%;
   display: grid;
-  justify-items: start; }
+  justify-items: start;
+  gap: 1rem;
+  grid-template-columns: 1fr; }
   .form__group--row {
-    grid-template-rows: 1fr; }
-  .form__group--col {
     display: grid;
-    grid-template-rows: 1fr; }
+    width: 100%; }
+  .form__group--col {
+    display: grid; }
+    .form__group--col-2 {
+      grid-column: 1 / -1;
+      font-size: 1.6rem; }
   .form__radio-input, .form__checkbox-input {
     display: none; }
   .form__radio-button, .form__checkbox-button {
@@ -102,6 +107,8 @@ body {
   .form__checkbox-input:checked ~ .form__checkbox-button::before,
   .form__checkbox-input:checked ~ .form__checkbox-button::after {
     opacity: 1; }
+  .form__label--primary {
+    color: #f9017c; }
   .form__select {
     padding: .2rem;
     width: 80%;
@@ -116,7 +123,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center; }
   .form--rows {
-    background-color: antiquewhite;
     row-gap: 1rem; }
   .form--person {
     grid-template-columns: 1fr 1fr; }
