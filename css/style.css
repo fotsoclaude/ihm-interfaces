@@ -114,7 +114,9 @@ body {
   .form__checkbox-input:checked ~ .form__checkbox-button::after {
     opacity: 1; }
   .form__label--primary {
-    color: #f9017c; }
+    color: #f9017c;
+    font-weight: 400;
+    line-height: 1; }
   .form__select {
     padding: .2rem;
     width: 80%;
@@ -132,3 +134,19 @@ body {
     row-gap: 1rem; }
   .form--person {
     grid-template-columns: 1fr 1fr; }
+  .form--date {
+    position: relative; }
+    .form--date .go {
+      position: absolute;
+      display: block;
+      top: 60%;
+      left: 65%;
+      background-color: #f9017c;
+      color: #fff;
+      width: 13rem;
+      height: 13rem;
+      border-radius: 50rem;
+      text-align: center;
+      padding-top: 3rem;
+      font-size: 4rem;
+      font-weight: 700; }

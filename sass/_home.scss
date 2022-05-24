@@ -124,6 +124,8 @@
     &__label {
         &--primary {
             color: $color-primary;
+            font-weight: 400;
+            line-height: 1;
         }
     }
 
@@ -156,7 +158,23 @@
     }
 
     &--date {
+        position: relative;
 
+        .go {
+            position: absolute;
+            display: block;
+            top: 60%;
+            left: 65%;
+            background-color: $color-primary;
+            color: #fff;
+            width: 13rem;
+            height: 13rem;
+            border-radius: 50rem;
+            text-align: center;
+            padding-top: 3rem;
+            font-size: 4rem;
+            font-weight: 700;
+        }
     }
 
 }
